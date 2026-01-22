@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Lizard Spock</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Rock Paper Scissors Lizard Spock</h1>
+        <p class="subtitle">Choose your weapon!</p>
+        
+        <div class="choices">
+            <button class="choice-btn" data-choice="rock">
+                <span class="emoji">✊</span>
+                <span class="name">Rock</span>
+            </button>
+            <button class="choice-btn" data-choice="paper">
+                <span class="emoji">✋</span>
+                <span class="name">Paper</span>
+            </button>
+            <button class="choice-btn" data-choice="scissors">
+                <span class="emoji">✌️</span>
+                <span class="name">Scissors</span>
+            </button>
+            <button class="choice-btn" data-choice="lizard">
+                <span class="emoji">🦎</span>
+                <span class="name">Lizard</span>
+            </button>
+            <button class="choice-btn" data-choice="spock">
+                <span class="emoji">🖖</span>
+                <span class="name">Spock</span>
+            </button>
+        </div>
+        
+        <div id="loading" class="loading">
+            <div class="loading-spinner"></div>
+            <p style="margin-top: 10px;">Playing...</p>
+        </div>
+        
+        <div id="result-area" class="result-area">
+            <div class="battle">
+                <div class="player">
+                    <div class="player-label">You</div>
+                    <div class="player-choice" id="user-emoji">✊</div>
+                    <div class="player-name" id="user-name">rock</div>
+                </div>
+                <div class="vs">VS</div>
+                <div class="player">
+                    <div class="player-label">Computer</div>
+                    <div class="player-choice" id="computer-emoji">✋</div>
+                    <div class="player-name" id="computer-name">paper</div>
+                </div>
+            </div>
+            
+            <div id="result-message" class="result-message">
+                You win!
+            </div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value" id="wins">0</div>
+                <div class="stat-label">Wins</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="losses">0</div>
+                <div class="stat-label">Losses</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="ties">0</div>
+                <div class="stat-label">Ties</div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <button onclick="resetStats()" style="background: #dc3545; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 0.9em;">
+                Reset Stats
+            </button>
+        </div>
+    </div>
+    
+    <script src="/static/app.js"></script>
+</body>
+</html>
